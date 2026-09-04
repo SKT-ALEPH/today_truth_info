@@ -16,6 +16,3 @@ CREATE TABLE IF NOT EXISTS live_daily_readings (
   raw_sha256 TEXT NOT NULL CHECK (raw_sha256 ~ '^[0-9a-f]{64}$'),
   UNIQUE (signal_id, record_date)
 );
-
-CREATE INDEX IF NOT EXISTS live_daily_readings_signal_date_idx
-  ON live_daily_readings (signal_id, record_date DESC);
