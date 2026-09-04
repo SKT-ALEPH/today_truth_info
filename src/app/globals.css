@@ -37,7 +37,7 @@ button:disabled { cursor: not-allowed; opacity: .55; transform: none !important;
 a { color: inherit; }
 code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-variant-numeric: tabular-nums; }
 
-.shell { width: min(1180px, calc(100% - 2rem)); margin: 0 auto; padding: 1.25rem 0 5rem; }
+.shell { width: min(1180px, calc(100% - 2rem)); min-width: 0; margin: 0 auto; padding: 1.25rem 0 5rem; }
 
 .topbar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-bottom: 1.1rem; border-bottom: 1px solid var(--line); }
 .brand { display: flex; align-items: center; gap: .75rem; }
@@ -55,6 +55,7 @@ code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-vari
 
 .workspace { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(300px, .75fr); gap: 1rem; }
 .status-card, .provenance-card, .history-card, .proof-card, .replay-reading, .state-ledger, .replay-table, .contract-details { border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(145deg, rgba(16, 34, 53, .98), rgba(10, 25, 40, .98)); box-shadow: var(--shadow); }
+.workspace > *, .lab > *, .replay-result > * { min-width: 0; }
 .status-card { padding: clamp(1.35rem, 3vw, 2.2rem); min-height: 27rem; }
 .provenance-card { padding: 1.5rem; }
 .history-card { grid-column: 1 / -1; padding: 1.5rem; }
@@ -106,7 +107,7 @@ h2 { margin: 0; font-size: 1.1rem; letter-spacing: -.025em; }
 .empty-state p { margin: 0; line-height: 1.55; }
 .empty-state strong { color: var(--text); }
 
-.table-wrap { width: 100%; margin-top: 1.25rem; overflow-x: auto; }
+.table-wrap { width: 100%; min-width: 0; max-width: 100%; margin-top: 1.25rem; overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: .84rem; }
 th, td { padding: .85rem .75rem; border-bottom: 1px solid var(--line-soft); text-align: left; vertical-align: top; }
 th { color: var(--muted); font-size: .72rem; font-weight: 650; white-space: nowrap; }
